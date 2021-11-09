@@ -59,9 +59,11 @@ These files should be named using an structure based on their date, then their t
 The files will then be moved into folders based on the year, the month and the day they were taken, plus their image type.
 
 An image ingested by linnaeus with said configuration would look like:
-```
-/2010/12/25/jpeg/2010-12-25-213014_1200x800_ab01cd.jpeg
-```
+
+`/2010/12/25/jpeg/2010-12-25-213014_1200x800_ab01cd.jpeg`
+
+Which, I admit it may look like complete gibberish for the non-initiated but, it's actually very use and information-ful.
+
 To reach that image we would need to navigate to the folder 2010 > 12 > 25 > jpeg.
 When reading the image file name: **2010-12-25-213014_1200x800_ab01cd.jpeg**, you can easily dissect each section of the name to get image information:
 
@@ -69,7 +71,7 @@ When reading the image file name: **2010-12-25-213014_1200x800_ab01cd.jpeg**, yo
 2. The image was taken at 213014: 21:30 and 14 seconds.
 3. The image has a size of 1200px wide and 800px tall.
 
-The string at the end being the very SHA256 hash the image produces, usually used as a discriminator to avoid collisions between files that are differents end versions of the same original image.
+The string at the end being the very SHA256 hash the image produces, which I use (and encourage you to use in your linnaeus taxonomy) as a discriminator to avoid collisions between files that are different end versions of the same original image.
 
 `linnaeus` allows me to have an organized library free of duplicated files, collisions, loss of information and loss of files by obscurity by implementing a 200 years old idea into the realm of filenaming.
 All of it without ever having to input myself any single data more than the casual *linnaeus.yaml* file in a folder where I want the pictures to be put into folders or have filenames with an structure different to the structure defined in the main configuration.
