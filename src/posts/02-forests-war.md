@@ -1,6 +1,7 @@
 ---
 title: A bot to track deforestation.
 date: 2020-07-16
+description: In hopes to make deforestation data less obscure and more accessible.
 tags:
   - posts
 layout: layouts/post.njk

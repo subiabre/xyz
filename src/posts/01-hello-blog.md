@@ -1,6 +1,7 @@
 ---
 title: Hello, blog. Goodbye, friend.
 date: 2020-06-13
+description: A nostalgia trip to computers in the early 2000s.
 tags:
   - posts
 layout: layouts/post.njk

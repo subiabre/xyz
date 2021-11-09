@@ -1,6 +1,7 @@
 ---
 title: A console app to catalog photo files.
 date: 2021-11-09
+description: How I saved myself from cluttering my photo library by implementing an idea from 200 years ago.
 tags:
   - posts
 layout: layouts/post.njk
