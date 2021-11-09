@@ -62,8 +62,8 @@ module.exports = function(eleventyConfig) {
     // From: https://github.com/11ty/eleventy/issues/529#issuecomment-568257426 
     // Adds {{ prevPost.url }} {{ prevPost.data.title }}, etc, to our njks templates
     for (let i = 0; i < coll.length; i++) {
-      const prevPost = coll[i - 1];
-      const nextPost = coll[i + 1];
+      const prevPost = coll[i + 1];
+      const nextPost = coll[i - 1];
 
       coll[i].data["prevPost"] = prevPost;
       coll[i].data["nextPost"] = nextPost;
