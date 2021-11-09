@@ -2,4 +2,23 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 1em;
+  color: #efefef;
+  background-color: #000;
+}
+
+img {
+  width: auto;
+}
+
+pre {
+  padding: 0;
+}
+
+code {
+  color: #08fe0e;
+  background-color: #282b2e;
+}
+
+em {
+  color: #efefef;
 }

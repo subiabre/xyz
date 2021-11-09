@@ -14,8 +14,7 @@ Comparisons like "*x* football pitches every minute" made me think we would run 
 
 Data is already there and is factual. We should not try to exaggerate it or present it in ways that are specially alarming or misleading to convince people who do not believe nor want to believe the facts.
 
-> Forests cover 31 percent of the world’s land surface, just over 4 billion hectares. [...] This is down from the pre-industrial area of 5.9 billion hectares.
---Earth Policy Institute
+> "Forests cover 31 percent of the world’s land surface, just over 4 billion hectares. [...] This is down from the pre-industrial area of 5.9 billion hectares."  --Earth Policy Institute
 
 Above statistic is already alarming enough. Worth of a massive extinction. Why are we then still discussing if it's true that we are in the middle of a massive extinction? Why wouldn't we try to convince people that we are?
 
