@@ -8,9 +8,9 @@ to this section's matching END comment to see page-specific styles.
 ******************************************************************************/
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #D7F5EF;
-  --color-text-main: #000000;
-  --color-primary: #AFECE0;
+  --color-bg: #131820;
+  --color-text-main: #e9e2ce;
+  --color-primary: #f6f6f6;
   --wrapper-height: 85vh;
   --image-max-width: 320px;
   --font-family: "HK Grotesk";
@@ -103,6 +103,7 @@ END Glitch hello-app default styles
 
 /* Page structure */
 body {
+  color: var()
   font-family: var(--font-family);
   background-color: var(--color-bg);
 }
@@ -218,7 +219,7 @@ a:hover {
 }
 .postTitle {
   font-size: 4rem;
-  color: #000;
+  color: var(--color-text-main);
   line-height: 1.1;
   margin-bottom: 2rem;
 }

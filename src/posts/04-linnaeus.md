@@ -14,7 +14,7 @@ After putting that off for more than a year, and reading [a lot](https://ninedeg
 
 Buckle up your seat-belts as I dive into naming and why it's important.
 
-## Enter Carl Linnaeus and Taxonomy
+## Carl Linnaeus and Taxonomy
 [Carl Linnaeus](https://en.wikipedia.org/wiki/Carl_Linnaeus) was basically the guy who invented classifying things, well maybe not the guy who invented it but the guy who made a thing out of classifying things, well maybe that neither but his method of naming and classifying living beings is the one who stood with the scientific community. The key for such success is the simplicity of the taxonomic model he proposed.
 
 In biology and linguistics there is this concept of "taxonomy" that is very important, specially in biology, as it's the way species are tagged apart from each other.
@@ -55,13 +55,14 @@ output:
     folders: "/{date.year}/{date.month}/{date.day}/{image.type}"
 ```
 That configuration means that each input file should be copied to the output.
-These files should be named using an structure based on their date, then their time of the day, then the image sizes, then the image hash first six characters and then the file extension. The files will then be moved into folders based on the year, the month and the day they were taken.
+These files should be named using an structure based on their date, then their time of the day, then the image sizes, then the image hash first six characters and then the file extension.
+The files will then be moved into folders based on the year, the month and the day they were taken, plus their image type.
 
 An image ingested by linnaeus with said configuration would look like:
 ```
-/2010/12/25/2010-12-25-213014_1200x800_ab01cd.jpeg
+/2010/12/25/jpeg/2010-12-25-213014_1200x800_ab01cd.jpeg
 ```
-To reach that image we would need to navigate to the folder 2010 > 12 > 25.
+To reach that image we would need to navigate to the folder 2010 > 12 > 25 > jpeg.
 When reading the image file name: **2010-12-25-213014_1200x800_ab01cd.jpeg**, you can easily dissect each section of the name to get image information:
 
 1. The image was taken in 2010-12-25: December 25th, 2010.
@@ -70,4 +71,6 @@ When reading the image file name: **2010-12-25-213014_1200x800_ab01cd.jpeg**, yo
 
 The string at the end being the very SHA256 hash the image produces, usually used as a discriminator to avoid collisions between files that are differents end versions of the same original image.
 
-`linnaeus` allows me to have an organized library free of duplicated files, collisions, and 
+`linnaeus` allows me to have an organized library free of duplicated files, collisions, loss of information and loss of files by obscurity by implementing a 200 years old idea into the realm of filenaming.
+All of it without ever having to input myself any single data more than the casual *linnaeus.yaml* file in a folder where I want the pictures to be put into folders or have filenames with an structure different to the structure defined in the main configuration.
+And overall it allows my library to be not only app independent, unlike I was while using Shotwell, but also system independent. The library itself is also the catalogue and the database. I can upload my files to a cloud service and I would still find my pictures with ease.
