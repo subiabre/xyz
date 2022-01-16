@@ -44,6 +44,11 @@ I didn't need a hashing function, I needed a taxonomizing function. A tiny, phot
 
 The product that came out of this is `linnaeus` ([Github](https://github.com/subiabre/linnaeus)). A small, console based, symfony app that will take a predefined taxonomy along with some config and then apply it to image files in some source address.
 
+Example:
+```bash
+$ linnaeus get /home/camera /home/images --config='custom_config.yaml'
+```
+
 The configuration is a yaml file in the following form:
 ```yaml
 input:
@@ -61,16 +66,16 @@ output:
     folders: "/{date.year}/{date.month}/{date.day}"
 ```
 
-With the file naming taxonomy defined as an array because for this case a single string would be too long for a single line. The above taxonomy results in files like the following:
+With the file naming taxonomy defined as an array because for this case a single string would be too long and hard to read for a single line. The above taxonomy results in files like the following:
 
-> 2021/10/31/2021-10-31-120230_1080x1920_23d6c9.jpg
+**2021/10/31/2021-10-31-120230_1080x1920_23d6c9.jpg**
 
 And I know at first glance it doesn't look much less obscure than a hash or the original filenames but when you pay a little attention you can dissect each part easily.
 
 First, the image is located at 2021 > 10 > 31. Because it was taken on the 31st of the 10th month of 2021. Now we can see the filename and let's try to see what image it is.
 
 - *2021-10-31* - is the same as the folders. The big date of the picture.
-- *120230* - is 12 hour, 02 minutes, 30 seconds of the image. The small date.
+- *120230* - is 12 hour, 02 minutes, 30 seconds. The small date of the picture.
 - *1080x1920* - is the width and the height of the image. Because I tend to apply different croppings so knowing their sizes helps me identify one cropping at first.
 - *23d6c9* - are the first 6 characters of the sha256 hash of this image. Very useful to avoid collisions between end versions of the same image, for example when you apply different colour schemes or crop two different scenes inside the image using the same aspect ratio.
 - *.jpg* - this image is a jpeg.
@@ -98,14 +103,19 @@ This structure allows me to import all my raws to `Camera/` conserving their ori
 
 This setup also allows me to run a single command when I'm inside a directory with a linnaeus.yaml file:
 ```bash
+# This:
 $ linnaeus
 # It's the same as:
-$ linnaeus taxonomize --configuration='linnaeus.yaml' . .
+$ linnaeus get --configuration='linnaeus.yaml' . .
 ```
 
 The main advantage of linnaeus, in case you didn't notice yet, is that it works at filesystem level and does not mutate in any way the metadata inside your pictures, allowing you to use any higher level photo management software you want over your library and combine linnaeus with their advanced sorting functions like custom tags or face-detections.
 
 ## Conclusions and notes.
-Currently it's not very battle tested, as it is a personal project that I open sourced, so I've found it particularly slow when moving images from the camera itself or other drives to the computer drive, but when the files are all in your computer's own memory it's actually faster than Shotwell at moving and categorising them.
+Currently it's not very battle tested, as it is a personal project that I open sourced, but some downsides I could notice are:
+
+- It's particularly slow when it has to move files between different drives. It'll be faster for you to move the files from the camera to your computer and running linnaeus with all the files inside your filesystem. Now this is actually faster than Shotwell, specially at very large amounts around the >500 files mark.
+
+- Sometimes, if you don't use the {file.hash} taxonomy variable, you will lose images if they are very similar in all of the other metadata. That's exactly why that variable exists, please use it to avoid losing files.
 
 On another note I didn't mean to dunk on Shotwell or disregard their work by any means, it just happened to be a bad tool for my particular use case. In all other aspects it is a great project.
