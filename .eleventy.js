@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const pluginSEO = require("eleventy-plugin-seo");
+const slugify = require("slugify");
 
 /**
 * This is the JavaScript code that determines the config for your Eleventy site
@@ -40,6 +41,17 @@ module.exports = function(eleventyConfig) {
   // Filters let you modify the content https://www.11ty.dev/docs/filters/
   eleventyConfig.addFilter("htmlDateString", dateObj => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+  });
+
+  eleventyConfig.addFilter("htmlDateSlug", dateObj => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy/LL/dd");
+  });
+
+  eleventyConfig.addFilter("slugify", string => {
+    return slugify(string, {
+      lower: true,
+      strict: true
+    });
   });
 
   eleventyConfig.setBrowserSyncConfig({ ghostMode: false });
