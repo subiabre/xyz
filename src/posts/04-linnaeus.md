@@ -1,5 +1,5 @@
 ---
-title: A console app to catalog photo files.
+title: A console app to catalog photo files large libraries.
 date: 2021-11-09
 description: How I saved myself from cluttering my photo library by implementing an idea from 200 years ago.
 tags:
@@ -12,9 +12,9 @@ I was dependant on [Shotwell](https://wiki.gnome.org/Apps/Shotwell) to keep my *
 
 And as I did some editing on them with [Darktable](https://www.darktable.org/) and [GIMP](https://www.gimp.org/), Shotwell couldn't really keep these *output* as organized. Moreover it created a second problem: it added to the pollution existing on my images library by adding new metadata files of itself, making me less able to handle the library by just browsing it on my filesystem.
 
-What if I wanted to upload my library to some cloud service? Send the raw files to somebody? What if somebody sent me back an image of me? Where am I gonna store this new "unknown.jpg" file so that I can remember what it is and where to find it easily? What if I want to back up my library in a machine where I can't run Shotwell in? How am I going to be able to distinguish which of all the "DSC_0001(1)" to "DSC_0002(27)" is the one I want without opening each one?
+What if I wanted to upload my library to some cloud service? Send the raw files to somebody? What if somebody sent me back a new version of an image of me? Where am I gonna store this new "unknown.jpg" file so that I can remember what it is and where to find it easily? What if I want to back up my library in a machine where I can't run Shotwell in? How am I going to be able to distinguish which of all the "DSC_001(1)" to "DSC_001(27)" is the one I want without opening each one?
 
-Without knowing I had stumbled upon a digital instance of a millena old problem and that >200 years ago had a pretty solid solution. Buckle up your seatbelts as I rant about **taxonomy**, **nomenclature**, hashing, filenaming and why are all of this things related and why they are important to keep a large photo file library organised.
+Without knowing I had stumbled upon a digital instance of a millena old problem and that >200 years ago had a solution. Buckle up your seatbelts as I rant about **taxonomy**, **nomenclature**, hashing, filenaming and why are all of this things related and why they are important to keep a large photo file library organised.
 
 ## Carl Linnaeus and taxonomy.
 Taxonomy is the science that classifies things. It is a concept born out of biology and their need to tell species apart. This need is only a branch of humans' obsession to name things to be able to tell them apart.
@@ -106,7 +106,7 @@ This setup also allows me to run a single command when I'm inside a directory wi
 # This:
 $ linnaeus
 # It's the same as:
-$ linnaeus get --configuration='linnaeus.yaml' . .
+$ linnaeus get . . --configuration='linnaeus.yaml'
 ```
 
 The main advantage of linnaeus, in case you didn't notice yet, is that it works at filesystem level and does not mutate in any way the metadata inside your pictures, allowing you to use any higher level photo management software you want over your library and combine linnaeus with their advanced sorting functions like custom tags or face-detections.
