@@ -57,4 +57,4 @@ Here is the end result:
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/1B4un0e"  ><a href="//imgur.com/a/1B4un0e">Earth&#39;s axis tilting across Africa/Europe between June 2020 and June 2021.</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
-It's worth mentioning that the final render "speeds up" around the equator zone because due that zone being larger in area there are less chances for the satellite to take a picture of an area inside the upper and lower margins of the longitude chosen for this composition.
+It's worth mentioning that the final render "speeds up" around the equator zone because due to that zone being larger in area there are less chances for the satellite to take a picture of an area inside the upper and lower margins of the longitude chosen for this composition.
