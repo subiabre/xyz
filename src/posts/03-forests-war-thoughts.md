@@ -6,7 +6,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-In a [previous post](/posts/02-forests-war) I introduced and explained how [@ForestsWar](http://twitter.com/ForestsWar) was made.
+In a previous post I introduced and explained how [@ForestsWar](http://twitter.com/ForestsWar) was made.
 
 In this post I'll dive in some after-thoughts.
 
