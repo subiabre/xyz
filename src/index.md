@@ -6,4 +6,4 @@ layout: layouts/home.njk
 
 I am [@subiabre](http://github.com/subiabre). I create things, mostly software.
 
-### Posts
+## Posts
