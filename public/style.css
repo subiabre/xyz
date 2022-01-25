@@ -1,9 +1,16 @@
+:root {
+  --global-font-size: 16px;
+  --global-line-height: 1.5em;
+  --font-color: #efefee;
+  --background-color: #000000;
+  --tertiary-color: #1BE0A5;
+  --code-bg-color: #282b2e;
+}
+
 body {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 1em;
-  color: #efefef;
-  background-color: #000;
 }
 
 img {
@@ -15,10 +22,18 @@ pre {
 }
 
 code {
-  color: #08fe0e;
-  background-color: #282b2e;
+  color: var(--tertiary-color);
 }
 
-em {
-  color: #efefef;
+blockquote {
+  padding: 0 var(--global-line-height);
+  color: var(--secondary-color);
+}
+
+blockquote::after {
+  color: var(--tertiary-color);
+}
+
+blockquote p {
+  margin: 0;
 }
