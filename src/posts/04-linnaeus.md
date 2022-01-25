@@ -68,7 +68,7 @@ output:
 
 With the file naming taxonomy defined as an array because for this case a single string would be too long and hard to read for a single line. The above taxonomy results in files like the following:
 
-**2021/10/31/2021-10-31-120230_1080x1920_23d6c9.jpg**
+> **2021/10/31/2021-10-31-120230_1080x1920_23d6c9.jpg**
 
 And I know at first glance it doesn't look much less obscure than a hash or the original filenames but when you pay a little attention you can dissect each part easily.
 
