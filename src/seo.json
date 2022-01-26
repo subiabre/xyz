@@ -1,7 +1,7 @@
 {
-  "glitch-help-instructions": "For a custom domain, change the 'url' parameter from 'glitch-default' to your domain _without_ a traling slash, like 'https://www.example.com'",
   "title": "subiabre.xyz",
   "description": "Stories about software, science, systems and other stuff.",
   "url": "https://subiabre.xyz",
+  "author": "Daniel Subiabre",
   "image": "https://avatars.githubusercontent.com/u/61125897"
 }
