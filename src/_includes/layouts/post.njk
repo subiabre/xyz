@@ -9,7 +9,9 @@ permalink: "{{ date | htmlDateSlug }}/{{ title | slugify }}/"
 <div class="wrapper post">
   <div>
     {# The post front matter includes the title property #}
-    <h1 class='postTitle'>{{title}}</h1>
+    <h1 class='postTitle'>
+      <span>{{title}}</span>
+    </h1>
     <p>
       <time datetime="{{ date }}">{{ date | htmlDateString }}</time>
       <br/>

@@ -37,3 +37,8 @@ blockquote::after {
 blockquote p {
   margin: 0;
 }
+
+.postTitle span {
+  color: var(--background-color);
+  background-color: var(--font-color);
+}
