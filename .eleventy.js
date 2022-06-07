@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const pluginSEO = require("eleventy-plugin-seo");
+const pluginSafeExternalLinks = require("@hirusi/eleventy-plugin-safe-external-links");
 const slugify = require("slugify");
 
 /**
@@ -26,14 +27,17 @@ module.exports = function(eleventyConfig) {
   ]);
   eleventyConfig.addPassthroughCopy("public");
 
-  /* From: https://github.com/artstorm/eleventy-plugin-seo
-  
-  Adds SEO settings to the top of all pages
-  The "glitch-default" bit allows someone to set the url in seo.json while
-  still letting it have a proper glitch.me address via PROJECT_DOMAIN
-  */
   const seo = require("./src/seo.json");
   eleventyConfig.addPlugin(pluginSEO, seo);
+
+  eleventyConfig.addPlugin(pluginSafeExternalLinks, {
+    pattern: "https{0,1}://",
+    noopener: true,
+    noreferrer: false,
+    files: [
+      ".html",
+    ],
+  });
 
   // Filters let you modify the content https://www.11ty.dev/docs/filters/
   eleventyConfig.addFilter("htmlDateString", dateObj => {
