@@ -27,7 +27,7 @@ Before taxonomy was a thing and without the approval of the scientific community
 
 The problem with the vulgar names of species is that they are not really unique nor consistent. Which turns out is actually a big problem when you want to classify things. For the most part these names would vary between places that spoke different languages and between communities too, and with this variance also came false species that were the same species, like dove/pigeon, and one species that actually was several, like crabs.
 
-Biologists couldn't rely on vulgar names of the species to publish their papers for neither a lot of colleagues would know what species they were talking about nor would they be able to correctly enclose and "specify" their findings.
+Biologists couldn't rely on vulgar names of the species to publish their papers for neither a lot of colleagues would know what species they were talking about nor would they be able to correctly enclose and _specify_ their findings. (Ha! Get it? _Specify_, as in _species_, funny isn't it?)
 
 They attempted solutions to this problem but [Carl Linnaeus](https://en.wikipedia.org/wiki/Carl_Linnaeus) turned out to come up with a solid fix in 1735. The details of how he came up to such a solution would only enlarge this post unnecessarily, so in essence, he proposed a binomial system to identify species by using two latin names to describe the species genus (the group they belong to) and a unique trait that sets them apart. Much like [chinese naming](https://en.wikipedia.org/wiki/Chinese_name) where people have a family name first and a given name second, i.e from bigger to smaller.
 
@@ -35,7 +35,7 @@ This is the scientific name of the species, a nomenclature, as opposed to the vu
 
 A good example is our own name as a species: **homo sapiens** because we belong to the genus *homo* and our trait is our thinking ability (*sapiens* in latin).
 
-*"Ok but how does this correlate to organising photos?"* If you look at taxonomy from a computing perspective, it turns out to be much like a [hash](https://en.wikipedia.org/wiki/Hash_function) function. You give taxonomy an input species and they look at the traits, the content of this species, and produce a standarised, unique output that is true for each instance of the same input. The key difference between hashing and taxonomizing is that the latter returns an output that is human readable so that people can quickly pick up what thing is it that they are referring to.
+*"Ok but how does this correlate to organising photos?"* If you look at taxonomy from a computing perspective, it turns out to be much like a [hash](https://en.wikipedia.org/wiki/Hash_function) function. You give taxonomy an input species and they look at the traits, the content of this species, and produce a standarised, unique name output that is true for each instance of the same input species. The key difference between hashing and taxonomizing is that the latter returns an output that is human readable so that people can quickly pick up what thing is it that they are referring to.
 
 ## Enter `linnaeus`.
 While it would be easy to write a script that can take each photo and rename it with their hash string in some algorithm, and solve the unique naming requirement for my library, that would actually worsen even more the obscurity of the names I had in the library and would make it virtually impossible to find anything. At least with the original camera names I know which picture was shot before the others.
