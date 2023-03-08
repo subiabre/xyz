@@ -43,3 +43,17 @@ blockquote p {
   color: var(--background-color);
   background-color: var(--font-color);
 }
+
+a {
+  background: linear-gradient(to left, transparent 50%, var(--primary-color) 50%) right;
+  background-size: 210% 100%;
+  background-color: transparent;
+  transition:  background-position 0.2s ease;
+}
+
+a:hover {
+  color: var(--background-color);
+  background-position: left;
+  background-color: transparent;
+  transition:  background-position 0.2s ease;
+}
