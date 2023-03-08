@@ -44,6 +44,10 @@ blockquote p {
   background-color: var(--font-color);
 }
 
+p {
+  font-weight: lighter;
+}
+
 a {
   background: linear-gradient(to left, transparent 50%, var(--primary-color) 50%) right;
   background-size: 210% 100%;
