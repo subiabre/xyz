@@ -2,6 +2,7 @@
   --global-font-size: 16px;
   --global-line-height: 1.5em;
   --font-color: #efefee;
+  --font-stack: 'Liberation Sans', sans-serif;
   --background-color: #000000;
   --tertiary-color: #1BE0A5;
   --code-bg-color: #282b2e;
@@ -60,4 +61,20 @@ a:hover {
   background-position: left;
   background-color: transparent;
   transition:  background-position 0.2s ease;
+}
+
+li {
+  margin: 0 0 1em 0;
+}
+
+.controls p::before {
+  font-family: monospace;
+}
+
+.controls p.previous::before {
+  content: 'post--';
+}
+
+.controls p.next::before {
+  content: 'post++';
 }

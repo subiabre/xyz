@@ -17,22 +17,22 @@ permalink: "{{ date | htmlDateSlug }}/{{ title | slugify }}/"
       <br/>
       {{ description }}
     </p>
-    <hr>
+    <hr/>
 
     {# Content from the body of the post markdown appears here #}
     {{ content | safe }}
+
+    <hr/>
     <div class="controls">
     {# The previous and next post data is added in .eleventy.js #}
     {% if prevPost.url %}
-      <p>
-        <strong>Previous post</strong>: 
-        <a class="previous" href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
+      <p class="previous">
+        <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
       </p>
     {% endif %}
     {% if nextPost.url %}
-      <p>
-        <strong>Next post</strong>: 
-        <a class="next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+      <p class="next">
+        <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
       </p>
     {% endif %}
     </div>
