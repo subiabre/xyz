@@ -10,4 +10,4 @@ I create [tools](http://github.com/subiabre) to help me better understand or nav
 
 Other times I just let go of some personal thoughts, also mostly software related.
 
-![Self portrait](https://avatars.githubusercontent.com/u/61125897)
+![Self portrait](/public/me_min.jpg)
